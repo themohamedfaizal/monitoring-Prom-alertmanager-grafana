@@ -14,10 +14,6 @@ RUN tar xvf alertmanager.tar.gz
 
 COPY $PWD/start.sh .
 
-WORKDIR /alertmanager/
-
-RUN alertmanager --config.file=/alertmanager/alertmanager.yml &
-
 EXPOSE 9090 9100 9093 3000
 
 CMD ["/start.sh"]
